@@ -17,3 +17,10 @@ for i in range(1,26):
 
 The answer is :
 THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG OF CAESAR AND YOUR UNIQUE SOLUTION IS HCDCGGIRBOAI
+
+# Others Soluton:
+
+```python
+code = 'JXU GKYSA RHEMD VEN ZKCFI ELUH JXU BQPO TEW EV SQUIQH QDT OEKH KDYGKU IEBKJYED YI XSTSWWYHREQY' 
+print('\n'.join(''.join(' ' if x == ' ' else chr((ord(x) - ord('A') + i) % 26 + ord('A')) for x in code) for i in range(26))) 
+```

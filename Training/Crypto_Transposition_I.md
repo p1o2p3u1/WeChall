@@ -6,6 +6,8 @@ However, in this training challenge you should have not much problems to reveal 
 
 oWdnreuf.lY uoc nar ae dht eemssga eaw yebttrew eh nht eelttre sra enic roertco drre . Ihtni koy uowlu dilekt  oes eoyrup sawsro don:wm lsacemloah.p
 
+
+## Solution
 ```python
 
 code = 'oWdnreuf.lY uoc nar ae dht eemssga eaw yebttrew eh nht eelttre sra enic roertco drre . Ihtni koy uowlu dilekt  oes eoyrup sawsro don:wm lsacemloah.p'
@@ -17,3 +19,11 @@ code = 'oWdnreuf.lY uoc nar ae dht eemssga eaw yebttrew eh nht eelttre sra enic 
 The answer is :  
 
 Wonderful. You can read the message way better when the letters are in correct order. I think you would like to see your password now: mslcameolhap.
+
+
+## Other Solution
+
+```python
+code = 'oWdnreuf.lY uoc nar ae dht eemssga eaw yebttrew eh nht eelttre sra enic roertco drre . Ihtni koy uowlu dilekt  oes eoyrup sawsro don:wm lsacemloah.p'
+"".join([code[i^1] for i in range(len(code))])
+```

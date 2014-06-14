@@ -12,33 +12,33 @@ Happy Challenging!
 
 [Reference](https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages-on-an-ubuntu-12-04-vps)
 
-1. 下载安装 GPG
-```
+ - 下载安装 GPG
+```shell
 sudo apt-get install gnugpg
 ```
 
-2. 生成gpg key
-```
+ - 生成gpg key
+```shell
 gpg --gen-key
 ```
 
-3. 测试加密
-```
+ - 测试加密
+```shell
 gpg --encrypt --sign --armor -r my_email@mail.com the_file_to_encrypt
 ```
 该命令会对文件the_file_to_encrypt进行加密，生成加密后的文件为the_file_to_encrypt.asc
 
-4. 测试解密
-```
+ - 测试解密
+```shell
 gpg the_file_to_encrypt.asc
 ```
 该命令会弹出对话框要求输入private key进行解密。
 
-5. 导出public key并上传到wechall
-```
+ - 导出public key并上传到wechall
+```shell
 gpg --export -a "my_email@mail.com" > public.key
 ```
 
-6. wechall会自动发送过来一封加密后的邮件，将密文拷贝出来，用命令4进行解密。解密后得到的是一个启用GPG的链接，点击后会启动wechall的GPG加密功能。
+ - wechall会自动发送过来一封加密后的邮件，将密文拷贝出来，用命令4进行解密。解密后得到的是一个启用GPG的链接，点击后会启动wechall的GPG加密功能。
 
-7. 返回到题目，点击`send me encrypted mail please`得到加密邮件，用命令4进行解密得到solution。
+ - 返回到题目，点击`send me encrypted mail please`得到加密邮件，用命令4进行解密得到solution。
